@@ -10,8 +10,10 @@ st.write("Learn Tech in simple Pidgin and Hausa!")
 API_KEY = st.secrets["GEMINI_API_KEY"]
 genai.configure(api_key=API_KEY)
 
-# Using the most stable model name
-model = genai.GenerativeModel('gemini-1.5-flash-latest')
+model = genai.GenerativeModel(
+    model_name="gemini-1.5-flash",
+    system_instruction=system_instruction
+)
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
