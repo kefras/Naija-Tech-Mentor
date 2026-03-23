@@ -15,7 +15,7 @@ try:
     instruct = "You are Oga Tech. Explain tech in Pidgin/Hausa using Naija analogies."
     
     # THE FIX: We use 'gemini-pro' which is the most globally stable name
-    model = genai.GenerativeModel("gemini-pro")
+  model = genai.GenerativeModel("gemini-3.1-pro-preview", system_instruction=instruct)
 
     if "messages" not in st.session_state:
         st.session_state.messages = []
