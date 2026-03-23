@@ -13,7 +13,7 @@ try:
     
     # Define the Oga Tech persona
     instruct = "You are Oga Tech. Explain complex tech in Pidgin and Hausa using local Nigerian analogies."
-    model = genai.GenerativeModel("models/gemini-1.5-flash", system_instruction=instruct)
+    model = genai.GenerativeModel("gemini-1.5-flash-latest", system_instruction=instruct)
 
     # 3. Chat Interface
     if "messages" not in st.session_state:
